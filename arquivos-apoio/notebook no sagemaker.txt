@@ -1,0 +1,55 @@
+
+
+MAQUINA PARA CRIAR O NOTEBOOK NO SAGEMAKER
+
+===================================================
+Opção mais barata com GPU: ml.g4dn.xlarge
+===================================================
+
+Características:
+
+GPU: 1x NVIDIA T4 (16 GB VRAM)
+vCPUs: 4
+RAM: 16 GB
+Armazenamento: EBS configurável
+
+Preço estimado: ~ US$ 0.526 por hora (variando por região)
+
+Alternativas:
+Instância	    GPU	        VRAM	RAM	    Preço aprox.	Observações
+ml.g4dn.xlarge	NVIDIA T4	16 GB	16 GB	~$0.526/h	    Mais barata com GPU
+ml.g5.xlarge	NVIDIA A10G	24 GB	16 GB	~$1.006/h	    Mais potente, mas o dobro do preço
+ml.p3.2xlarge	V100	    16 GB	61 GB	~$3.825/h	    Muito potente, mas cara
+
+
+
+Comparativo de custos (On-Demand)
+ml.g4dn.xlarge – GPU T4 (16 GB VRAM), 4 vCPUs, 16 GB RAM — US$ 0,7364/h 
+ml.p2.xlarge – GPU K80 (12 GB VRAM), 4 vCPUs, 61 GB RAM — US$ 1,361/h 
+ml.g5.xlarge – GPU A10G (24 GB VRAM), 4 vCPUs, 16 GB RAM — custo bem maior: cerca de US$ ~1/h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

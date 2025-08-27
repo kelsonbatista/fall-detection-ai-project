@@ -1,0 +1,140 @@
+from tensorflow.keras.layers import LayerNormalization, MultiHeadAttention, GlobalAveragePooling1D, Embedding
+from tensorflow.keras.models import Model
+import tensorflow as tf
+
+
+# --- 1. Bloco Transformer Encoder ---
+# Esta função cria um bloco reutilizável
+def transformer_encoder(inputs, head_size, num_heads, ff_dim, dropout=0):
+    # Atenção e Normalização
+    x = MultiHeadAttention(key_dim=head_size, num_heads=num_heads, dropout=dropout)(inputs, inputs)
+    x = Dropout(dropout)(x)
+    x = LayerNormalization(epsilon=1e-6)(x + inputs) # Conexão residual
+
+    # Feed Forward e Normalização
+    ff_out = Dense(ff_dim, activation="relu")(x)
+    ff_out = Dropout(dropout)(ff_out)
+    ff_out = Dense(inputs.shape[-1])(ff_out)
+    outputs = LayerNormalization(epsilon=1e-6)(x + ff_out) # Conexão residual
+    return outputs
+
+
+# --- 2. Função para Construir o Modelo Completo ---
+def build_transformer_model(input_shape, head_size, num_heads, ff_dim, num_transformer_blocks, mlp_units, dropout=0, mlp_dropout=0):
+    inputs = Input(shape=input_shape)
+    x = inputs
+
+    # --- Codificação Posicional (Positional Encoding) ---
+    # Usaremos uma abordagem simples e eficaz: posições aprendidas
+    positions = tf.range(start=0, limit=input_shape[0], delta=1)
+    position_embedding = Embedding(input_dim=input_shape[0], output_dim=input_shape[1])(positions)
+    x += position_embedding # Adiciona a informação de posição às features
+
+    # --- Empilhando os Blocos Transformer ---
+    for _ in range(num_transformer_blocks):
+        x = transformer_encoder(x, head_size, num_heads, ff_dim, dropout)
+
+    # --- Cabeça de Classificação ---
+    # Agrega a informação de todos os 30 frames em um único vetor
+    x = GlobalAveragePooling1D(data_format="channels_last")(x)
+    
+    # Camadas densas para a classificação final
+    for dim in mlp_units:
+        x = Dense(dim, activation="relu")(x)
+        x = Dropout(mlp_dropout)(x)
+    
+    outputs = Dense(NUM_CLASSES, activation="softmax")(x)
+
+    return Model(inputs, outputs)
+
+# --- 3. Como Usar e Treinar o Modelo ---
+# Supondo que seus dados já foram carregados e escalonados:
+# X_train_scaled, y_train, X_val_scaled, y_val, class_weight_dict
+# Parâmetros do modelo Transformer (você pode experimentar estes valores)
+input_shape = X_train_scaled.shape[1:]  # (30, 128)
+HEAD_SIZE = 256
+NUM_HEADS = 4
+FF_DIM = 4 # Dimensão da camada Feed-Forward interna
+NUM_TRANSFORMER_BLOCKS = 4
+MLP_UNITS = [128] # Unidades na camada densa final
+DROPOUT = 0.2
+MLP_DROPOUT = 0.4
+NUM_CLASSES = 3 # Suas 3 classes
+
+# Construir o modelo
+transformer_model = build_transformer_model(
+    input_shape,
+    head_size=HEAD_SIZE,
+    num_heads=NUM_HEADS,
+    ff_dim=FF_DIM,
+    num_transformer_blocks=NUM_TRANSFORMER_BLOCKS,
+    mlp_units=MLP_UNITS,
+    dropout=DROPOUT,
+    mlp_dropout=MLP_DROPOUT,
+)
+
+# Compilar o modelo (mesma configuração de antes)
+transformer_model.compile(
+    optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), #'adam'
+    loss='categorical_crossentropy', 
+    metrics=['accuracy']
+)
+
+# Visualizar a arquitetura
+transformer_model.summary()
+
+# Treinar o modelo (exatamente como você treinou os outros)
+# Lembre-se de definir os callbacks (checkpoint, early_stop) como antes
+model_results = transformer_model.fit(
+    X_train_scaled, y_train,
+    validation_data=(X_val_scaled, y_val),
+    batch_size=32, 
+    epochs=200, 
+    callbacks=[checkpoint, early_stop], # Use seus callbacks
+    class_weight=class_weight_dict
+)
+
+transformer_model.save(f"{OUTPUT_LSTM_MODEL_DIR}/{OUTPUT_LSTM_MODEL_FULL}")
+print("Training completed successfully!")
+
+# Salva o histórico do treinamento em um arquivo JSON
+with open(f"{OUTPUT_LSTM_MODEL_DIR}/{OUTPUT_LSTM_MODEL_HISTORY}", "w") as f:
+    json.dump(model_results.history, f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

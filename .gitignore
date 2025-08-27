@@ -1,0 +1,32 @@
+outros/
+pose-val-test/
+sounds/
+results/
+videos_aug/
+videos_full/
+videos_test/
+
+# Arquivos de Ambiente Virtual
+venv/
+.env/
+env/
+
+# Arquivos de Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de dados e janelas
+*.npy
+
+# Modelos treinados e outros artefatos
+*.pt
+*.keras
+*.joblib
+*.onnx
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
+

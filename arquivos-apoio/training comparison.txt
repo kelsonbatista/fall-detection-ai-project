@@ -1,0 +1,119 @@
+Estou desenvolvendo um trabalho para detecção de quedas utilizando IA. Ja tenho um dataset e fiz algumas alteracoes para o treinamento com yolo. O dataset tem basicamente essa distribuição:
+
+🌟 FULL DATASET Analysis:
+========================================
+📄 Total label files: 24445
+📊 Total labels: 24445
+
+Class counts:
+Class 0: 17481
+Class 1: 5618
+Class 2: 1346
+
+============================================================
+🚂 TRAIN SET ONLY Analysis:
+========================================
+📄 Total TRAIN label files: 16923
+📊 Total TRAIN labels: 16923
+
+TRAIN Class counts:
+Class 0: 12,056 (71.2%)
+Class 1: 3,987 (23.6%)
+Class 2: 880 (5.2%)
+
+O primeiro treinamento foi feito utilizando augmentation no yolo. O segundo dataset foi treinado sem o augmentation no yolo. 
+
+E o terceito dataset, as classes foram redistribuidas e foi feito augmentation das imagens para equiparar as classes, tendo essa caracteristica:
+
+🌟 FULL DATASET Analysis:
+========================================
+📄 Total label files: 36352
+📊 Total labels: 36352
+
+Class counts:
+Class 0: 17481
+Class 1: 9605
+Class 2: 9266
+
+============================================================
+🚂 TRAIN SET ONLY Analysis:
+========================================
+📄 Total TRAIN label files: 28830
+📊 Total TRAIN labels: 28830
+
+TRAIN Class counts:
+Class 0: 12,056 (41.8%)
+Class 1: 7,974 (27.7%)
+Class 2: 8,800 (30.5%)
+
+Abaixo eu coloco o resultado dos 3 treinamentos. Me faça um relatório sobre o desempenho deles e qual performou melhor , qual seria mais adequado para continuação dos meus testes, sendo a proxima etapa utilização de LSTM.
+
+
+
+
+Ultralytics 8.3.179 🚀 Python-3.10.18 torch-2.5.1+cu121 CUDA:0 (Tesla T4, 14918MiB)
+YOLO11n-pose summary (fused): 109 layers, 2,888,431 parameters, 0 gradients, 7.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|██████████| 236/236 [00:39<00:00,  5.94it/s]
+                   all       7526       7522       0.631       0.754      0.682      0.436      0.444      0.516       0.43        0.172
+               no_fall         5425       5425      0.916       0.92        0.943      0.695      0.782      0.786       0.764      0.347
+                  fall         1631       1631      0.661       0.887      0.798      0.378      0.284      0.382       0.28        0.0562
+             attention         466         466        0.317       0.455      0.305      0.234      0.265      0.382       0.245      0.113
+Speed: 0.2ms preprocess, 1.2ms inference, 0.0ms loss, 0.9ms postprocess per image
+Results saved to fall_detect_yolo11n_pose_aug/yolo11n_pose3
+
+
+Ultralytics 8.3.179 🚀 Python-3.10.18 torch-2.5.1+cu121 CUDA:0 (Tesla T4, 14918MiB)
+YOLO11n-pose summary (fused): 109 layers, 2,888,431 parameters, 0 gradients, 7.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|██████████| 236/236 [00:39<00:00,  5.99it/s]
+                   all      7526       7522      0.686       0.808       0.71        0.497      0.557      0.568      0.483      0.198
+               no_fall       5425       5425      0.947       0.939       0.954      0.772      0.849      0.815      0.839      0.397
+                  fall       1631       1631      0.795       0.885       0.854      0.459      0.461      0.434      0.343      0.0785
+             attention       466         466        0.316        0.6          0.323      0.258      0.362      0.455      0.267      0.119
+Speed: 0.2ms preprocess, 1.2ms inference, 0.0ms loss, 0.9ms postprocess per image
+Results saved to fall_detect_yolo11n_pose_saug/yolo11n_pose
+
+
+Ultralytics 8.3.179 🚀 Python-3.10.18 torch-2.6.0+cu118 CUDA:0 (Tesla T4, 14918MiB)
+YOLO11n-pose summary (fused): 109 layers, 2,888,431 parameters, 0 gradients, 7.5 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Pose(P          R      mAP50  mAP50-95): 100%|██████████| 236/236 [00:37<00:00,  6.34it/s]
+                   all       7522       7522       0.77        0.738       0.73        0.503       0.587      0.513      0.446       0.156
+               no_fall        5425       5425       0.95        0.94         0.961      0.737       0.825      0.806      0.781       0.285
+                  fall        1631       1631       0.839      0.857       0.822      0.451       0.416      0.409      0.244       0.0419
+             attention        466         466         0.52        0.416       0.406      0.322       0.52        0.324      0.313       0.14
+Speed: 0.2ms preprocess, 1.2ms inference, 0.0ms loss, 0.9ms postprocess per image
+Results saved to fall_detect_yolo11n_pose_balanced/yolo11n_pose
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

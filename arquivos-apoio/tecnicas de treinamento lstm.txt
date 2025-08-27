@@ -1,0 +1,65 @@
+Sugestões para Deixar o Modelo Ainda Mais Eficiente
+Embora seu modelo já seja excelente, existem algumas variações que você pode testar para buscar ainda mais performance. Pense nelas como experimentos.
+
+1. Posição do Dropout (Alternativa Recomendada)
+Em vez de usar uma camada Dropout separada, uma prática mais moderna e muitas vezes mais eficaz para LSTMs é usar os parâmetros dropout e recurrent_dropout dentro da própria camada LSTM.
+
+dropout: Aplica dropout na entrada da camada.
+
+recurrent_dropout: Aplica dropout nas conexões recorrentes (entre os passos de tempo). Isso ajuda a regularizar o "estado interno" da célula LSTM, o que pode ser muito poderoso.
+
+Exemplo de como ficaria:
+
+Python
+
+lstm_model_alt1 = Sequential([
+    Input(shape=(WINDOW, X.shape[2])),
+    LSTM(64, return_sequences=True, dropout=0.2, recurrent_dropout=0.2),
+    LSTM(32, dropout=0.2, recurrent_dropout=0.2),
+    Dense(NUM_CLASSES, activation='softmax')
+])
+Vantagem: Pode levar a uma regularização mais eficaz e, consequentemente, a um modelo que generaliza melhor para novos dados.
+
+2. Experimentar com GRU (Gated Recurrent Unit)
+A GRU é uma variação da LSTM. Ela é mais simples (tem menos "portões" internos) e, por isso, é computacionalmente mais leve. Em muitos problemas, a GRU alcança uma performance similar ou até melhor que a LSTM, mas com um tempo de treinamento menor.
+
+Exemplo com GRU:
+
+Python
+
+from tensorflow.keras.layers import GRU # Precisa importar a camada GRU
+
+gru_model = Sequential([
+    Input(shape=(WINDOW, X.shape[2])),
+    GRU(64, return_sequences=True, recurrent_dropout=0.2),
+    GRU(32, recurrent_dropout=0.2),
+    Dense(NUM_CLASSES, activation='softmax')
+])
+Vantagem: Treinamento mais rápido. Vale muito a pena testar.
+
+3. Usar LSTM Bidirecional
+Uma camada LSTM Bidirecional processa a sequência em duas direções: do início para o fim e do fim para o início. Isso permite que o modelo tome decisões com base tanto no contexto passado quanto no futuro.
+
+Exemplo com Bidirecional:
+
+Python
+
+from tensorflow.keras.layers import Bidirectional # Precisa importar
+
+bidirectional_model = Sequential([
+    Input(shape=(WINDOW, X.shape[2])),
+    # A primeira camada precisa do return_sequences=True para empilhar
+    Bidirectional(LSTM(64, return_sequences=True, recurrent_dropout=0.2)),
+    # A segunda pode ser bidirecional ou não
+    Bidirectional(LSTM(32, recurrent_dropout=0.2)),
+    Dense(NUM_CLASSES, activation='softmax')
+])
+Vantagem: Potencialmente a maior acurácia, pois usa mais informação contextual.
+Desvantagem: É mais lento para treinar e não pode ser usado em tempo real (pois precisa da sequência inteira, "do futuro", para fazer uma previsão). Para o seu caso de treinar com vídeos já gravados, isso não é um problema.
+
+Recomendação Final
+Sua arquitetura atual é um excelente ponto de partida. Se você quiser experimentar para otimizar:
+
+Primeiro, teste a arquitetura com GRU. É uma mudança simples que pode acelerar seu trabalho.
+
+Depois, teste a versão com LSTM Bidirecional. Se ela trouxer um ganho de acurácia significativo, pode ser a melhor escolha para a performance final do seu trabalho.

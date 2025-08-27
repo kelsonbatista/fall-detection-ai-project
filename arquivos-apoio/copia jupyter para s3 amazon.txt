@@ -1,0 +1,35 @@
+AMAZON
+COPIA DO JUPYTER PARA O S3
+
+
+import boto3
+from botocore.exceptions import NoCredentialsError
+
+# Inicializando o cliente S3
+s3 = boto3.client('s3')
+
+# Caminho local do arquivo
+local_file_path = 'datasetsfall.zip'
+
+# Nome do bucket S3 e o nome do arquivo no S3
+bucket_name = 'fallbox'
+s3_file_name = 'datasetsfall.zip'
+
+# Função para enviar o arquivo para o S3
+def upload_to_s3(local_file, bucket, s3_file):
+    try:
+        s3.upload_file(local_file, bucket, s3_file)
+        print(f'Arquivo enviado com sucesso para {bucket}/{s3_file}')
+    except FileNotFoundError:
+        print("O arquivo local não foi encontrado.")
+    except NoCredentialsError:
+        print("Credenciais da AWS não encontradas.")
+    except Exception as e:
+        print(f"Erro ao enviar arquivo: {e}")
+
+# Chamar a função
+upload_to_s3(local_file_path, bucket_name, s3_file_name)
+
+
+
+

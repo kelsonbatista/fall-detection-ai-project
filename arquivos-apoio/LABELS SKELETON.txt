@@ -1,0 +1,93 @@
+[
+    {
+        "name": "no_fall",
+        "color": "#24b353",
+        "type": "rectangle",
+        "attributes": []
+    },
+    {
+        "name": "fall",
+        "color": "#fa3253",
+        "type": "rectangle",
+        "attributes": []
+    },
+    {
+        "name": "attention",
+        "color": "#ffcc33",
+        "type": "rectangle",
+        "attributes": []
+    },
+
+    {
+        "name": "Pose",
+        "type": "skeleton",
+        "color": "#ff0000",
+        "svg": "skeleton",
+        "attributes": [],
+        "labels": [
+            { "name": "NO", "type": "points" },
+            { "name": "LEY", "type": "points" },    olho esquerdo
+            { "name": "REY", "type": "points" },    olho direito
+            { "name": "LER", "type": "points" },    orelha esquerda
+            { "name": "RER", "type": "points" },    orelha direita
+            { "name": "LS", "type": "points" },     ombro esquerdo
+            { "name": "RS", "type": "points" },     ombro direito
+            { "name": "LEB", "type": "points" },    cotovelo esquerdo
+            { "name": "REB", "type": "points" },    cotovelo direito
+            { "name": "LW", "type": "points" },     pulso esquerdo
+            { "name": "RW", "type": "points" },     pulso direito
+            { "name": "LHP", "type": "points" },    cintura esquerda
+            { "name": "RHP", "type": "points" },    cintura direita
+            { "name": "LK", "type": "points" },     joelho esquerdo
+            { "name": "RK", "type": "points" },     joelho direito
+            { "name": "LA", "type": "points" },     calcanhar esquerdo
+            { "name": "RA", "type": "points" }      calcanhar direito
+
+kpt_shape: [18, 3]
+flip_idx (espelho): [0, 2, 1, 4, 3, 5, 7, 6, 9, 8, 11, 10, 13, 12, 15, 14, 17, 16]
+
+
+00  01 - no		nose
+01  02 - ley	left eye
+02  03 - rey	right eye
+03  04 - ler	left ear
+04  05 - rer	right ear
+05  06 - ne		neck
+06  07 - ls		left shoulder
+07  08 - rs		right shoulder
+08  09 - le		left elbow
+09  10 - re		right elbow
+10  11 - lw		left wrist
+11  12 - rw		right wrist
+12  13 - lh		left hip
+13  14 - rh		right hip
+14  15 - lk		left knee
+15  16 - rk		right knee
+16  17 - la		left ankle
+17  18 - ra		right ankle
+
+
+
+        ],
+        "elements": [
+            ["NO", "LEY"],
+            ["NO", "REY"],
+            ["LEY", "LER"],
+            ["REY", "RER"],
+            ["NO", "LS"],
+            ["NO", "RS"],
+            ["LS", "LEB"],
+            ["LEB", "LW"],
+            ["RS", "REB"],
+            ["REB", "RW"],
+            ["LS", "LHP"],
+            ["RS", "RHP"],
+            ["LHP", "RHP"],
+            ["LHP", "LK"],
+            ["LK", "LA"],
+            ["RHP", "RK"],
+            ["RK", "RA"]
+        ],
+        "sublabels": []
+    }
+]

@@ -1,0 +1,160 @@
+
+
+
+Criar ambiente no sagemaker para treinamento com yolo
+
+
+
+# 🚀 Cria um ambiente isolado no SageMaker + instala ultralytics + registra kernel
+!python3 -m venv ultralytics-env
+!source ultralytics-env/bin/activate && pip install --upgrade pip
+!source ultralytics-env/bin/activate && pip install ultralytics jupyter ipykernel
+
+# registra no JupyterLab do SageMaker
+!source ultralytics-env/bin/activate && python -m ipykernel install --user --name=ultralytics-env --display-name "Python (ultralytics)"
+
+
+
+Instalacao de dependencias:
+
+conda install -c conda-forge ultralytics numpy=1.26.4 "pandas<2.0.0"
+
+
+Verificação pós-instalação
+
+Após aplicar qualquer solução, teste se tudo funciona:
+python# Testar imports
+import numpy as np
+import pandas as pd
+from ultralytics import YOLO
+
+print(f"NumPy version: {np.__version__}")
+print(f"Pandas version: {pd.__version__}")
+
+# Testar YOLO básico
+model = YOLO('yolov8n.pt')
+print("YOLO carregado com sucesso!")
+
+
+
+
+
+Outras dependencias
+
+==========================================================
+# Limpar instalações problemáticas
+!pip uninstall ultralytics numpy pandas opencv-python -y
+
+# Instalar versões compatíveis com SageMaker
+!pip install numpy==1.26.4
+!pip install pandas==1.5.3
+!pip install opencv-python==4.8.1.78
+!pip install ultralytics --no-deps
+!pip install torch torchvision torchaudio pillow pyyaml requests matplotlib seaborn
+
+==========================================================
+
+Se der erro:
+
+
+
+# Desinstalar pacotes problemáticos
+!pip uninstall ultralytics pandas numpy opencv-python torch torchvision -y
+
+# Limpar cache do pip
+!pip cache purge
+
+
+# Instalar NumPy compatível com SageMaker
+!pip install numpy==1.26.4
+
+# Instalar Pandas compatível
+!pip install pandas==2.0.3
+
+# Instalar PyTorch
+!pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# Instalar outras dependências
+!pip install opencv-python==4.8.1.78 pillow pyyaml requests matplotlib seaborn
+
+# Instalar Ultralytics por último
+!pip install ultralytics
+
+
+
+Passo 3: OBRIGATÓRIO - Reiniciar o Kernel
+Kernel -> Restart & Clear Output
+
+
+Passo 4: Verificar a instalação
+pythonimport numpy as np
+import pandas as pd
+import torch
+from ultralytics import YOLO
+
+print(f"✅ NumPy: {np.__version__}")
+print(f"✅ Pandas: {pd.__version__}")
+print(f"✅ PyTorch: {torch.__version__}")
+print(f"✅ CUDA disponível: {torch.cuda.is_available()}")
+
+# Teste básico
+model = YOLO('yolov8n.pt')
+print("✅ YOLO carregado com sucesso!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

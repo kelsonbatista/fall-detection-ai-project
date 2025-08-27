@@ -1,0 +1,18 @@
+00  01 - no		nose
+01  02 - ley	left eye
+02  03 - rey	right eye
+03  04 - ler	left ear
+04  05 - rer	right ear
+05  06 - ne		neck
+06  07 - ls		left shoulder
+07  08 - rs		right shoulder
+08  09 - le		left elbow
+09  10 - re		right elbow
+10  11 - lw		left wrist
+11  12 - rw		right wrist
+12  13 - lh		left hip
+13  14 - rh		right hip
+14  15 - lk		left knee
+15  16 - rk		right knee
+16  17 - la		left ankle
+17  18 - ra		right ankle

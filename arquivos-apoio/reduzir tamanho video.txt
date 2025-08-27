@@ -1,0 +1,9 @@
+
+
+pelo temrinal
+
+
+
+for file in *.mp4; do
+  ffmpeg -i "$file" -vf scale=iw/2:ih/2 -vcodec libx264 -crf 28 "resize/$file"
+done

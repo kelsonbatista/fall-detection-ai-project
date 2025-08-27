@@ -1,0 +1,22 @@
+
+
+
+
+Compactar
+
+zip -r arquivo.zip pasta_ou_arquivo
+
+👉 Exemplo:
+
+zip -r backup.zip /home/usuario/projetos
+
+
+
+
+Descompactar
+
+unzip arquivo.zip
+
+👉 Extrair para pasta específica:
+
+unzip arquivo.zip -d /destino

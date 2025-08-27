@@ -1,0 +1,26 @@
+
+
+# === MUDANÇA: Substituir estas linhas ===
+
+# ANTES (copia os arquivos):
+shutil.copy2(img_file, dst_img)
+shutil.copy2(label_file, dst_label)
+
+# DEPOIS (move os arquivos):
+shutil.move(str(img_file), str(dst_img))
+shutil.move(str(label_file), str(dst_label))
+
+# === LOCALIZAÇÃO NO SEU CÓDIGO ===
+# Procure por esta seção no final do loop:
+
+            # destination paths
+            dst_img = dst_root / "images" / split / cls / new_img_name
+            dst_label = dst_root / "labels" / split / cls / new_label_name
+
+            # SUBSTITUIR ESTAS DUAS LINHAS:
+            # shutil.copy2(img_file, dst_img)
+            # shutil.copy2(label_file, dst_label)
+            
+            # POR ESTAS:
+            shutil.move(str(img_file), str(dst_img))
+            shutil.move(str(label_file), str(dst_label))

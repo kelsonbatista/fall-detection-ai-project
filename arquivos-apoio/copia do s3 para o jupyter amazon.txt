@@ -1,0 +1,49 @@
+COPIA DO S3 PARA O JUPYTER AMAZON 
+
+
+import boto3
+
+# Nome do bucket e caminho do arquivo no S3
+bucket_name = 'fallbox'
+s3_file_key = 'datasets.zip'
+
+# Caminho onde o arquivo será salvo na instância do SageMaker (por exemplo, na pasta atual)
+local_file_path = 'datasets.zip'
+
+# Cria uma sessão do boto3 (SageMaker já tem permissões para acessar o S3)
+s3 = boto3.client('s3')
+
+# Faz o download do arquivo do S3 para o local
+s3.download_file(bucket_name, s3_file_key, local_file_path)
+
+print(f"✅ Download concluído! Arquivo salvo em: {local_file_path}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

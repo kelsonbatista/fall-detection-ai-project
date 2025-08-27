@@ -1,0 +1,11 @@
+
+
+copia do aws para computador
+
+aws s3 cp s3://fallbox/datasetsfall.zip . 
+
+
+
+copia do computador para amazon
+
+aws s3 cp datasets2.zip s3://fallbox 
