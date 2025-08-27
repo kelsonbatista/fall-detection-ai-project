@@ -1,7 +1,7 @@
 # Project: Fall Detection in Video (YOLO + LSTM) - AI
 
-> Capstone Project for the **MBA in Artificial Intelligence and Big Data (University of São Paulo - USP/ICMC)**
-> Projeto do **MBA em Inteligência Artificial e Big Data (Universidade de São Paulo - USP/ICMC)** 
+> Capstone Project for the **MBA in Artificial Intelligence and Big Data (University of São Paulo - [USP/ICMC](https://www.icmc.usp.br/))**
+> Projeto do **MBA em Inteligência Artificial e Big Data (Universidade de São Paulo - [USP/ICMC](https://www.icmc.usp.br/))** 
 >
 > Advisor / Orientador: [Ph.D. João E.S. Batista Neto](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4727975A6&tokenCaptchar=0cAFcWeA6pkywu6NkSLDR5S_JTF6DnaZXnCJnnuiBXoQ0wbmZDz5IZ_Sz-bhG_dNj7G6qXO_DX5S9wP15ldCoHm_Qj-LffaIJjLb3hJXqjiWpCaG3xY1JMRPb815DBasK-lQ9vHitxry2SFcJjHXnZhJ01dyRazgc6ZjVXqqH-W_aO6LBsJIaHoRPnEs76eETMR8tXa05wrWqb4qeM0pkREzxG2CmPUPZLfPRn0l0HEAtp96U9FDpSIzQLdr0C3SW-AA8wHqpFgnNnxhXPTuJjhstD99Sp08WMhvzDJC9ttZnRz_f-7OA5fIX5xdoI8k452BT141qVFPm15iLefuHVuKzwqEr3O296N94FR2JqV7EXBEkTt4SmqlXfGkcPW6Raq4Up9xebL0LbURD5KcD2rXDnEsh0Yyxws2xdJFyNu4o_lBi3hif2QQleRTzYGpv4NF8XDJkeTy-ycTazCcb06pOeJMXszhdMRNJWBe18ZSYrmkJnHRmc7kfnBEUzsdB58R2DbejWisvxaPp__8ojMVuOK710qLKtZnlOucdEwGYdLnwtccbOfZcKH03PVgyOAQDf5LXInuOp6cVOa55AgSx1lKtUcYG2HDJ8-WpT5ikaNwKcOlXOqIEAzwO8lvBLRLj-6W9vY4BA0kum4YTeoEOi3utzGtBb8MInLUKXz7gKU4SwmgMlbKCHzirsIV3ot3XMomg_TJL-qIfafuQAmqZUcTOXIeKXS9lLW3kHcbrL7HJeHoKmj8OeAnY8dG1cGClKkwtLEzSEYzvhiYQG432MQP0ko54X8AnzVbDGTyGTW9slNB15ALsrR9QnoJM8pd3BHwidEhYKY84i5enE5WwKzxqDgF7XoA)
 
