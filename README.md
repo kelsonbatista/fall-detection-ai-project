@@ -28,15 +28,16 @@ The system was implemented with a two-stage pipeline:
 
 O sistema foi implementado com um pipeline em duas etapas principais:
 
-A primeira etapa consistiu no treinamento com o **YOLOv11-pose, uma Rede Neural Convolucional** para detecção e estimativa de pose, e extração de características de cada frame, vetores de 128 dimensões contendo dados estáticos (posição) e dinâmicos (velocidade).
+- A primeira etapa consistiu no treinamento com o **YOLOv11-pose, uma Rede Neural Convolucional** para detecção e estimativa de pose, e extração de características de cada frame, vetores de 128 dimensões contendo dados estáticos (posição) e dinâmicos (velocidade).
 
-A segunda etapa envolveu a utilização dos vetores em formato de sequências (janelas) de 30 frames para treinar um **modelo de classificação temporal em uma Rede Neural Recorrente, LSTM**, capaz de analisar e classificar a ação contida nessa janela de tempo.
-
-
+- A segunda etapa envolveu a utilização dos vetores em formato de sequências (janelas) de 30 frames para treinar um **modelo de classificação temporal em uma Rede Neural Recorrente, LSTM**, capaz de analisar e classificar a ação contida nessa janela de tempo.
 
 
+## Dataset / Base de Dados
 
-
+Paper: [https://www.sciencedirect.com/science/article/pii/S2352340924008552](GMDCSA-24: A dataset for human fall detection in videos)
+Github: [https://github.com/ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos](GMDCSA-24: A dataset for human fall detection in videos)
+Authro: Ekram Alam. (2024). ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos: 2.0 (v2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.12921216
 
 
 
