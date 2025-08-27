@@ -35,8 +35,8 @@ O sistema foi implementado com um pipeline em duas etapas principais:
 
 ## Dataset / Base de Dados
 
-Paper: [https://www.sciencedirect.com/science/article/pii/S2352340924008552](GMDCSA-24: A dataset for human fall detection in videos)
-Github: [https://github.com/ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos](GMDCSA-24: A dataset for human fall detection in videos)
+Paper: [GMDCSA-24: A dataset for human fall detection in videos](https://www.sciencedirect.com/science/article/pii/S2352340924008552)
+Github: [GMDCSA-24: A dataset for human fall detection in videos](https://github.com/ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos)
 Authro: Ekram Alam. (2024). ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos: 2.0 (v2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.12921216
 
 
