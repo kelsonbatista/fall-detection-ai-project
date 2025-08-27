@@ -6,6 +6,9 @@ videos_aug/
 videos_full/
 videos_test/
 
+.ipynb_checkpoints
+.virtual_documents
+
 # Arquivos de Ambiente Virtual
 venv/
 .env/
