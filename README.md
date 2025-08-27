@@ -13,10 +13,50 @@ In recent years, the number of people living alone has increased significantly, 
 
 ---
 
-Nos últimos anos, o número de pessoas que moram sozinhas tem crescido de forma expressiva e estão sujeitas a situações de emergências nos casos de quedas, seja por desmaios, tropeços ou enfermidades. Em muitos casos, a pessoa fica impossibilitada de se levantar ou pedir ajuda, podendo até perder a consciência, e a demora no socorro pode levar a complicações graves, sequelas permanentes ou até mesmo ao óbito. Sistemas com sensores vestíveis ou ambientais se mostram ineficientes, invasivos e não confiáveis. Diante disso, esse projeto tem o objetivo explorar o uso da inteligência artificial através da visão computacional para detectar quedas em vídeos e em tempo real nos ambientes domésticos, contribuindo para a segurança e a qualidade de vida de milhões de pessoas que vivem ou se encontram sozinhas.
+Nos últimos anos, o número de pessoas que moram sozinhas tem crescido de forma expressiva e estão sujeitas a situações de emergências nos casos de quedas, seja por desmaios, tropeços ou enfermidades. Em muitos casos, a pessoa fica impossibilitada de se levantar ou pedir ajuda, podendo até perder a consciência, e a demora no socorro pode levar a complicações graves, sequelas permanentes ou até mesmo ao óbito. Sistemas com sensores vestíveis ou ambientais se mostram ineficientes, invasivos e não confiáveis. Diante disso, esse projeto tem o objetivo explorar o uso da inteligência artificial através da visão computacional para detectar quedas em tempo real nos ambientes domésticos, contribuindo para a segurança e a qualidade de vida de milhões de pessoas que vivem ou se encontram sozinhas.
+
+
+## Overview / Visão Geral
+
+The system was implemented with a two-stage pipeline:
+
+- The first stage consisted of training with **YOLOv11-pose, a Convolutional Neural Network** for detection and pose estimation, and extracting features from each frame as 128-dimensional vectors containing static (position) and dynamic (velocity) data.
+
+- The second stage involved using these vectors, arranged in 30-frame sequences (windows), to train a **temporal classification model using a Recurrent Neural Network, LSTM**, capable of analyzing and classifying the action contained within that time window.
 
 ---
 
+O sistema foi implementado com um pipeline em duas etapas principais:
+
+A primeira etapa consistiu no treinamento com o **YOLOv11-pose, uma Rede Neural Convolucional** para detecção e estimativa de pose, e extração de características de cada frame, vetores de 128 dimensões contendo dados estáticos (posição) e dinâmicos (velocidade).
+
+A segunda etapa envolveu a utilização dos vetores em formato de sequências (janelas) de 30 frames para treinar um **modelo de classificação temporal em uma Rede Neural Recorrente, LSTM**, capaz de analisar e classificar a ação contida nessa janela de tempo.
+
+
+
+
+
+
+
+
+
+
+Base de Dados
+
+
+Arquitetura do Pipeline
+
+
+Tecnologias
+
+
+Como reproduzir
+
+
+Resultados
+
+
+Cite
 
 
 
