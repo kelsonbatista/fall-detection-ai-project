@@ -4,6 +4,7 @@ Capstone Project for the **MBA in Artificial Intelligence and Big Data (Universi
 Projeto de conclusão do **MBA em Inteligência Artificial e Big Data (Universidade de São Paulo - USP/ICMC)** 
 
 **Keywords:** Fall Detection, Human Activity Recognition, Pattern Recognition, Temporal Classification, Convolutional Neural Networks, Domestic Accidents
+
 **Palavras-chave:** Detecção de quedas, Reconhecimento de Atividade Humana, Classificação Temporal, Reconhecimento de padrões, Redes Neurais Convolucionais, Acidentes Domésticos 
 
 ## About the Project / Sobre o Projeto
