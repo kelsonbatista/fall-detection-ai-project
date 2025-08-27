@@ -7,7 +7,7 @@
 
 **Palavras-chave:** Detecção de quedas, Reconhecimento de Atividade Humana, Classificação Temporal, Reconhecimento de padrões, Redes Neurais Convolucionais, Acidentes Domésticos 
 
-\
+<br><br>
 
 ## About the Project / Sobre o Projeto
 
@@ -17,7 +17,7 @@ In recent years, the number of people living alone has increased significantly, 
 
 Nos últimos anos, o número de pessoas que moram sozinhas tem crescido de forma expressiva e estão sujeitas a situações de emergências nos casos de quedas, seja por desmaios, tropeços ou enfermidades. Em muitos casos, a pessoa fica impossibilitada de se levantar ou pedir ajuda, podendo até perder a consciência, e a demora no socorro pode levar a complicações graves, sequelas permanentes ou até mesmo ao óbito. Sistemas com sensores vestíveis ou ambientais se mostram ineficientes, invasivos e não confiáveis. Diante disso, esse projeto tem o objetivo explorar o uso da inteligência artificial através da visão computacional para detectar quedas em tempo real nos ambientes domésticos, contribuindo para a segurança e a qualidade de vida de milhões de pessoas que vivem ou se encontram sozinhas.
 
-\
+<br><br>
 
 ## Overview / Visão Geral
 
@@ -35,7 +35,7 @@ O sistema foi implementado com um pipeline em duas etapas principais:
 
 - A segunda etapa envolveu a utilização dos vetores em formato de sequências (janelas) de 30 frames para treinar um **modelo de classificação temporal em uma Rede Neural Recorrente, LSTM**, capaz de analisar e classificar a ação contida nessa janela de tempo.
 
-\
+<br><br>
 
 ## Dataset / Base de Dados
 
@@ -45,7 +45,7 @@ Github: [GMDCSA-24: A dataset for human fall detection in videos](https://github
 
 Author: Ekram Alam. (2024). ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detection-in-Videos: 2.0 (v2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.12921216
 
-\
+<br><br>
 
 
 Base de Dados
