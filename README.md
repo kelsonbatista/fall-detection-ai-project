@@ -1,7 +1,7 @@
 # Project: Fall Detection in Video (YOLO + LSTM) - AI
 
-Capstone Project for the **MBA in Artificial Intelligence and Big Data (University of São Paulo - USP/ICMC)**
-Projeto de conclusão do **MBA em Inteligência Artificial e Big Data (Universidade de São Paulo - USP/ICMC)** 
+> Capstone Project for the **MBA in Artificial Intelligence and Big Data (University of São Paulo - USP/ICMC)**
+> Projeto de conclusão do **MBA em Inteligência Artificial e Big Data (Universidade de São Paulo - USP/ICMC)** 
 
 **Keywords:** Fall Detection, Human Activity Recognition, Pattern Recognition, Temporal Classification, Convolutional Neural Networks, Domestic Accidents
 
