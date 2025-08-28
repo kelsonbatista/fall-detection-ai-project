@@ -135,9 +135,8 @@ Main dependencies / Dependências principais:
 
 - Low rates of false positives and negatives / Baixas taxas de falsos positivos e negativos.
 
-<br>
 
-- More metrics in the project paper / Mais métricas no TCC.
+More metrics in the project paper / Mais métricas no TCC.
 
 <br>
 
