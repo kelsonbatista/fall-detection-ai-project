@@ -141,7 +141,17 @@ Main dependencies / Dependências principais:
 
 ## 📈 Qualitative tests / Testes qualitativos:
 
+The correct identification of classes during movement, particularly for the transitional `attention` action, demonstrates that the model has learned the characteristic temporal patterns of an unintentional fall, confirming its effectiveness in this analysis.
 
+A identificação correta das classes durante os movimentos, principalmente na ação transitória `attention`, demonstra que o modelo aprendeu os padrões temporais característicos de uma queda não intencional, confirmando sua eficácia nessa análise.
+
+![Teste de vídeo (1) do modelo final](teste1.png)
+
+Despite the transition from a vertical to a horizontal position, the model correctly classified the entire sequence of movements as `no_fall`. The temporal analysis distinguished the speed and controlled manner of lying down from the abrupt and uncontrolled acceleration that is characteristic of a real fall.
+
+Apesar da transição de uma posição vertical para horizontal, o modelo classificou corretamente toda a sequência de movimentos como `no_fall`. A análise temporal diferenciou a velocidade e a maneira de deitar-se de uma aceleração abrupta e descontrolada característica de uma queda real.
+
+![Teste de vídeo (2) do modelo final](teste2.png)
 
 <br>
 

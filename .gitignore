@@ -8,6 +8,8 @@ videos_test/
 
 .ipynb_checkpoints/
 .virtual_documents/
+./.ipynb_checkpoints/
+./.virtual_documents/
 
 # Arquivos de Ambiente Virtual
 venv/
