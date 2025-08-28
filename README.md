@@ -183,7 +183,7 @@ More metrics in the project paper / Mais métricas no TCC.
 
 - To my family and fellow students.
 
-- To ICMC/USP, its faculty, and for the guidance of my advisor, Ph.D. João E.S. Batista Neto.
+- To ICMC/USP, professors, and for the guidance of my advisor, Ph.D. João E.S. Batista Neto.
 
 - To the open-source software community: Python, CVAT, Docker, Ultralytics YOLO, TensorFlow/Keras, OpenCV, and Albumentations.
 
