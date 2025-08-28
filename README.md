@@ -119,21 +119,23 @@ Main dependencies / Dependências principais:
 
 **YOLOv11n-pose:**
 
-    - Global accuracy / Acurácia global ~ 81%
+- Global accuracy / Acurácia global ~ 81%
 
-        - Class fall: 92%
+    - Class fall: 92%
 
-        - Class no_fall: 93%
+    - Class no_fall: 93%
 
-        - Class attention: 46%
+    - Class attention: 46%
 
 **LSTM:**
 
-    - Global validation accuracy / Acurácia global de validação: 96.6%
+- Global validation accuracy / Acurácia global de validação: 96.6%
 
-    - AUC (fall vs no fall / queda vs. não-queda): 0.9993
+- AUC (fall vs no fall / queda vs. não-queda): 0.9993
 
-    - Low rates of false positives and negatives / Baixas taxas de falsos positivos e negativos.
+- Low rates of false positives and negatives / Baixas taxas de falsos positivos e negativos.
+
+
 
 - More metrics in the project paper / Mais métricas no TCC.
 
