@@ -54,7 +54,7 @@ Author: Ekram Alam. (2024). ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detectio
 
 - Python 3.10+
 
-- AWS SageMaker (Jupyter Lab Notebook for training/treinamento)
+- AWS SageMaker **ml.g4dn.xlarge** (Jupyter Lab Notebook for training/treinamento)
 
 - CVAT Computer Vision Annotation (for labeling/anotações)
 
