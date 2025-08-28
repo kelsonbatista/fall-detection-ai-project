@@ -12,7 +12,7 @@
 
 <br>
 
-## 📄 About the Project / Sobre o Projeto
+## ℹ️ About the Project / Sobre o Projeto
 
 In recent years, the number of people living alone has increased significantly, making them more vulnerable to emergency situations such as falls caused by fainting, tripping, or illness. In many cases, the individual may be unable to get up or call for help, and may even lose consciousness. Delays in assistance can lead to serious complications, permanent injuries, or even death. Systems based on wearable or environmental sensors have proven to be inefficient, invasive, and unreliable. In this context, this project aims to explore the use of artificial intelligence through computer vision to detect falls in videos and in real time in home environments, contributing to the safety and quality of life of millions of people who live or find themselves alone.
 
