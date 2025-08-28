@@ -3,6 +3,7 @@
 > Capstone Project for the **MBA in Artificial Intelligence and Big Data ([University of São Paulo - USP/ICMC](https://www.icmc.usp.br/))**
 > Projeto do **MBA em Inteligência Artificial e Big Data ([Universidade de São Paulo - USP/ICMC](https://www.icmc.usp.br/))** 
 >
+> Author / Autor: [Kelson Batista](https://linkedin.com/in/kelsonbatista)
 > Advisor / Orientador: [Ph.D. João E.S. Batista Neto](https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4727975A6&tokenCaptchar=0cAFcWeA6pkywu6NkSLDR5S_JTF6DnaZXnCJnnuiBXoQ0wbmZDz5IZ_Sz-bhG_dNj7G6qXO_DX5S9wP15ldCoHm_Qj-LffaIJjLb3hJXqjiWpCaG3xY1JMRPb815DBasK-lQ9vHitxry2SFcJjHXnZhJ01dyRazgc6ZjVXqqH-W_aO6LBsJIaHoRPnEs76eETMR8tXa05wrWqb4qeM0pkREzxG2CmPUPZLfPRn0l0HEAtp96U9FDpSIzQLdr0C3SW-AA8wHqpFgnNnxhXPTuJjhstD99Sp08WMhvzDJC9ttZnRz_f-7OA5fIX5xdoI8k452BT141qVFPm15iLefuHVuKzwqEr3O296N94FR2JqV7EXBEkTt4SmqlXfGkcPW6Raq4Up9xebL0LbURD5KcD2rXDnEsh0Yyxws2xdJFyNu4o_lBi3hif2QQleRTzYGpv4NF8XDJkeTy-ycTazCcb06pOeJMXszhdMRNJWBe18ZSYrmkJnHRmc7kfnBEUzsdB58R2DbejWisvxaPp__8ojMVuOK710qLKtZnlOucdEwGYdLnwtccbOfZcKH03PVgyOAQDf5LXInuOp6cVOa55AgSx1lKtUcYG2HDJ8-WpT5ikaNwKcOlXOqIEAzwO8lvBLRLj-6W9vY4BA0kum4YTeoEOi3utzGtBb8MInLUKXz7gKU4SwmgMlbKCHzirsIV3ot3XMomg_TJL-qIfafuQAmqZUcTOXIeKXS9lLW3kHcbrL7HJeHoKmj8OeAnY8dG1cGClKkwtLEzSEYzvhiYQG432MQP0ko54X8AnzVbDGTyGTW9slNB15ALsrR9QnoJM8pd3BHwidEhYKY84i5enE5WwKzxqDgF7XoA)
 
 **Keywords:** Fall Detection, Human Activity Recognition, Pattern Recognition, Temporal Classification, Convolutional Neural Networks, Domestic Accidents
@@ -11,7 +12,7 @@
 
 <br>
 
-## About the Project / Sobre o Projeto
+## 📄 About the Project / Sobre o Projeto
 
 In recent years, the number of people living alone has increased significantly, making them more vulnerable to emergency situations such as falls caused by fainting, tripping, or illness. In many cases, the individual may be unable to get up or call for help, and may even lose consciousness. Delays in assistance can lead to serious complications, permanent injuries, or even death. Systems based on wearable or environmental sensors have proven to be inefficient, invasive, and unreliable. In this context, this project aims to explore the use of artificial intelligence through computer vision to detect falls in videos and in real time in home environments, contributing to the safety and quality of life of millions of people who live or find themselves alone.
 
@@ -21,7 +22,7 @@ Nos últimos anos, o número de pessoas que moram sozinhas tem crescido de forma
 
 <br>
 
-## Overview / Visão Geral
+## 🔍 Overview / Visão Geral
 
 The system was implemented with a two-stage pipeline:
 
@@ -39,7 +40,7 @@ O sistema foi implementado com um pipeline em duas etapas principais:
 
 <br>
 
-## Dataset / Base de Dados
+## 📂 Dataset / Base de Dados
 
 Paper: [GMDCSA-24: A dataset for human fall detection in videos](https://www.sciencedirect.com/science/article/pii/S2352340924008552)
 
@@ -49,71 +50,172 @@ Author: Ekram Alam. (2024). ekramalam/GMDCSA24-A-Dataset-for-Human-Fall-Detectio
 
 <br>
 
+## 🧩 Technologies / Tecnologias
 
-Base de Dados
+- Python 3.10+
+
+- AWS SageMaker (Jupyter Lab Notebook for training/treinamento)
+
+- CVAT Computer Vision Annotation (for labeling/anotações)
+
+- Docker (for running CVAT/rodar CVAT)
+
+Main dependencies / Dependências principais:
+
+- Ultralytics (YOLOv11 for detection/detecção)
+
+- OpenCV
+
+- Numpy, pandas
+
+- Albumentations
+
+- Scikit-learn
+
+- TensorFlow/Keras (LSTM for temporal classification/classificação temporal)
+
+- Matplotlib
 
 
-Arquitetura do Pipeline
+<br>
+
+## ✨ Pipeline archtecture / Arquitetura do pipeline
+
+1. **Dataset preparation and organization / Preparação e organização da base de dados**
+
+    - 01-flatten-rename-videos.py
+    - 02-unzip-organize-after-cvat.py
+    - 03-resize-images.py
+    - 04-folders-integrity-box-pose.py
+    - 05-labels-integrity.py
+    - 06-update-classes-box-pose.py
+    - 07-class-redistribution-move.py
+    - 08-count-classes-weights.py
+    - 09-aug-apply-images.py
+
+2. **YOLOv11 training / treinamento**:
+
+    - 10-yolo-training.ipynb
+    - 11-yolo-validation-test.ipynb
+    - 12-yolo-predict.ipynb
+
+3. **Features extraction in windows / Extração de características em janelas** a partir das sequências de detecções.
+
+    - 13-aug-apply-videos.py
+    - 14-lstm-training-windows.ipynb
+
+4. **LSTM training / treinamento** para modelar a evolução temporal das ações.
+
+    - 15-lstm-training.ipynb
+
+5. **Model evaluation / Avaliação do modelo** para simulação em tempo real.
+
+    - 16-lstm-evaluation.ipynb
+    - 17-model-video-testing.ipynb
+
+<br>
+
+## 📊 Results / Resultados
+
+**YOLOv11n-pose:**
+
+    - Global accuracy / Acurácia global ~ 81%
+
+        - Class fall: 92%
+
+        - Class no_fall: 93%
+
+        - Class attention: 46%
+
+**LSTM:**
+
+    - Global validation accuracy / Acurácia global de validação: 96.6%
+
+    - AUC (fall vs no fall / queda vs. não-queda): 0.9993
+
+    - Low rates of false positives and negatives / Baixas taxas de falsos positivos e negativos.
+
+- More metrics in the project paper / Mais métricas no TCC.
+
+<br>
+
+## 📈 Qualitative tests / Testes qualitativos:
 
 
-Tecnologias
 
+<br>
 
-Como reproduzir
+## 📝 Limitações e Próximos Passos
 
+Generalization: Validate on broader datasets and in less controlled environments.
 
-Resultados
+Architectures: Explore GRU, BiLSTM, and Transformers for video analysis.
 
+Product: Integrate an automatic alert system and optimize for edge devices (deployment on low-cost hardware).
 
-Cite
-
-
-
-
-Sistema de visão computacional para **detecção automática de quedas** em ambientes domésticos, combinando **YOLO (detecção/pose)** e **LSTM (classificação temporal)**.
-
-> 🎓 Projeto integrante do **TCC - MBA em Inteligência Artificial e Big Data (USP - ICMC)**  
+Scenarios: Expand detection to include fainting/prolonged immobility, multiple people, occlusions, and challenging lighting conditions.
 
 ---
 
-## 📖 Sumário
-- [Visão Geral](#-visão-geral)
-- [Arquitetura do Pipeline](#-arquitetura-do-pipeline)
-- [Estrutura do Repositório](#-estrutura-do-repositório)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação](#-instalação)
-- [Como Reproduzir](#-como-reproduzir)
-  - [1) Preparação e Organização do Dataset](#1-preparação-e-organização-do-dataset)
-  - [2) Treino do YOLO (detecção/pose)](#2-treino-do-yolo-detecçãopose)
-  - [3) Extração de janelas e Treino do LSTM](#3-extração-de-janelas-e-treino-do-lstm)
-  - [4) Avaliação e Testes em Vídeos](#4-avaliação-e-testes-em-vídeos)
-  - [5) Teste em Tempo Real (Câmera)](#5-teste-em-tempo-real-câmera)
-- [Resultados Principais](#-resultados-principais)
-- [Limitações e Próximos Passos](#-limitações-e-próximos-passos)
-- [Agradecimentos](#-agradecimentos)
-- [Licença](#-licença)
+Generalização: Validar com bases mais amplas e ambientes menos controlados.
+
+Arquiteturas: Explorar GRU, BiLSTM, Transformers para vídeo.
+
+Produto: Integrar alertas automáticos e otimizar para edge devices (embarcar em hardware de baixo custo).
+
+Cenários: Expandir para detectar desmaios/longa imobilidade, múltiplas pessoas, oclusões, iluminação difícil.
+
+<br>
+
+## 🤝 Acknowledgments / Agradecimentos
+
+- To my family and fellow students.
+
+- To ICMC/USP, its faculty, and for the guidance of my advisor, Dr. João E.S. Batista Neto.
+
+- To the open-source software community: Python, CVAT, Docker, Ultralytics YOLO, TensorFlow/Keras, OpenCV, and Albumentations.
 
 ---
 
-## 📌 Visão Geral
-Este projeto aborda o problema de **Reconhecimento de Atividade Humana (HAR)** aplicado à **detecção de quedas**.  
+- À minha família e colegas de curso.
 
-A solução opera em duas etapas principais:  
-1. **YOLOv11n-pose** → detecção de pessoas + keypoints (18 pontos de pose).  
-2. **LSTM** → análise temporal de janelas de frames para classificar ações:  
-   - `0 - no_fall`  
-   - `1 - attention`  
-   - `2 - fall`  
+- Ao ICMC/USP, docentes e orientação do Dr. João E.S. Batista Neto.
 
----
+- À comunidade de software livre: Python, CVAT, Docker, Ultralytics YOLO, TensorFlow/Keras, OpenCV, Albumentations).
 
-## 🧩 Arquitetura do Pipeline
-```mermaid
-flowchart TD
-    A[Vídeos Originais] --> B[Pré-processamento 01-09 + 13]
-    B --> C[YOLO - Treino e Predições (10-12)]
-    C --> D[Extração de Features e Janelas (14)]
-    D --> E[LSTM - Treinamento e Avaliação (15-16)]
-    E --> F[Testes em Vídeos (17)]
-    E --> G[Teste em Câmera (18)]
+
+<br>
+
+## 📜 License / Licença
+
+GPL-3.0 license (GNU General Public License v3.0): This open-source license is perfect for students, researchers, and enthusiasts. It encourages open collaboration and knowledge sharing. See the [LICENSE](https://github.com/kelsonbatista/fall-detection-ai-project?tab=GPL-3.0-1-ov-file) file for full details.
+
+Licença GPL-3.0 (GNU General Public License v3.0): Essa licença de código aberto é ideal para estudantes, pesquisadores e entusiastas. Ela incentiva a colaboração e o compartilhamento de conhecimento. Para mais detalhes, consulte o arquivo completo da [LICENÇA](https://github.com/kelsonbatista/fall-detection-ai-project?tab=GPL-3.0-1-ov-file) no repositório.
+
+<br>
+
+## ✍🏻 Cite
+
+If you find this project helpful, give me a star ⭐ / Se você achar esse projeto útil, me dê uma estrela ⭐
+```
+Batista K.S. (2025). Fall Detection Model with Ultralytics YOLO version 11 and LSTM
+```
+```
+@software{Kelson_Fall_Detection_Model_2025,
+    author = {Kelson Batista},
+    license = {GPL-3.0},
+    month = ago,
+    title = {{Fall Detection Model with Ultralytics YOLO version 11 and LSTM}},
+    url = {https://github.com/kelsonbatista/fall-detection-ai-project},
+    version = {1.0.0},
+    year = {2025}
+}
+```
+<br>
+
+## 📞 Contact
+
+For questions, discussions, and support, contact me at kelsonbatista [at] gmail.com.
+
+Para dúvidas, discussões e suporte, entre em contato comigo em kelsonbatista [at] gmail.com.
 
