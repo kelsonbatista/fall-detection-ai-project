@@ -159,23 +159,23 @@ More metrics in the project paper / Mais métricas no TCC.
 
 ## 📝 Limitações e Próximos Passos
 
-Generalization: Validate on broader datasets and in less controlled environments.
+**Generalization:** Validate on broader datasets and in less controlled environments.
 
-Architectures: Explore GRU, BiLSTM, and Transformers for video analysis.
+**Architectures:** Explore GRU, BiLSTM, and Transformers for video analysis.
 
-Product: Integrate an automatic alert system and optimize for edge devices (deployment on low-cost hardware).
+**Product:** Integrate an automatic alert system and optimize for edge devices (deployment on low-cost hardware).
 
-Scenarios: Expand detection to include fainting/prolonged immobility, multiple people, occlusions, and challenging lighting conditions.
+**Scenarios:** Expand detection to include fainting/prolonged immobility, multiple people, occlusions, and challenging lighting conditions.
 
 ---
 
-Generalização: Validar com bases mais amplas e ambientes menos controlados.
+**Generalização:** Validar com bases mais amplas e ambientes menos controlados.
 
-Arquiteturas: Explorar GRU, BiLSTM, Transformers para vídeo.
+**Arquiteturas:** Explorar GRU, BiLSTM, Transformers para vídeo.
 
-Produto: Integrar alertas automáticos e otimizar para edge devices (embarcar em hardware de baixo custo).
+**Produto:** Integrar alertas automáticos e otimizar para edge devices (embarcar em hardware de baixo custo).
 
-Cenários: Expandir para detectar desmaios/longa imobilidade, múltiplas pessoas, oclusões, iluminação difícil.
+**Cenários:** Expandir para detectar desmaios/longa imobilidade, múltiplas pessoas, oclusões, iluminação difícil.
 
 <br>
 
@@ -200,15 +200,15 @@ Cenários: Expandir para detectar desmaios/longa imobilidade, múltiplas pessoas
 
 ## 📜 License / Licença
 
-GPL-3.0 license (GNU General Public License v3.0): This open-source license is perfect for students, researchers, and enthusiasts. It encourages open collaboration and knowledge sharing. See the [LICENSE](https://github.com/kelsonbatista/fall-detection-ai-project?tab=GPL-3.0-1-ov-file) file for full details.
+**GPL-3.0 license (GNU General Public License v3.0):** This open-source license is perfect for students, researchers, and enthusiasts. It encourages open collaboration and knowledge sharing. See the [LICENSE](https://github.com/kelsonbatista/fall-detection-ai-project?tab=GPL-3.0-1-ov-file) file for full details.
 
-Licença GPL-3.0 (GNU General Public License v3.0): Essa licença de código aberto é ideal para estudantes, pesquisadores e entusiastas. Ela incentiva a colaboração e o compartilhamento de conhecimento. Para mais detalhes, consulte o arquivo completo da [LICENÇA](https://github.com/kelsonbatista/fall-detection-ai-project?tab=GPL-3.0-1-ov-file) no repositório.
+**Licença GPL-3.0 (GNU General Public License v3.0):** Essa licença de código aberto é ideal para estudantes, pesquisadores e entusiastas. Ela incentiva a colaboração e o compartilhamento de conhecimento. Para mais detalhes, consulte o arquivo completo da [LICENÇA](https://github.com/kelsonbatista/fall-detection-ai-project?tab=GPL-3.0-1-ov-file) no repositório.
 
 <br>
 
 ## ✍🏻 Cite
 
-If you find this project helpful, give me a star ⭐ / Se você achar esse projeto útil, me dê uma estrela ⭐
+If you find this project helpful, **give me a star** ⭐ / Se você achar esse projeto útil, **me dê uma estrela** ⭐
 ```
 Batista K.S. (2025). Fall Detection Model with Ultralytics YOLO version 11 and LSTM
 ```
@@ -227,7 +227,7 @@ Batista K.S. (2025). Fall Detection Model with Ultralytics YOLO version 11 and L
 
 ## 📞 Contact
 
-For questions, discussions, and support, contact me at kelsonbatista [at] gmail.com.
+For questions, discussions, and support, contact me at **kelsonbatista [at] gmail.com**.
 
-Para dúvidas, discussões e suporte, entre em contato comigo em kelsonbatista [at] gmail.com.
+Para dúvidas, discussões e suporte, entre em contato comigo em **kelsonbatista [at] gmail.com**.
 
