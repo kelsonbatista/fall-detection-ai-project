@@ -99,16 +99,16 @@ Main dependencies / Dependências principais:
     - 11-yolo-validation-test.ipynb
     - 12-yolo-predict.ipynb
 
-3. **Features extraction in windows / Extração de características em janelas** a partir das sequências de detecções.
+3. **Features extraction in windows / Extração de características em janelas**
 
     - 13-aug-apply-videos.py
     - 14-lstm-training-windows.ipynb
 
-4. **LSTM training / treinamento** para modelar a evolução temporal das ações.
+4. **LSTM training / treinamento**
 
     - 15-lstm-training.ipynb
 
-5. **Model evaluation / Avaliação do modelo** para simulação em tempo real.
+5. **Model evaluation / Avaliação do modelo**
 
     - 16-lstm-evaluation.ipynb
     - 17-model-video-testing.ipynb
