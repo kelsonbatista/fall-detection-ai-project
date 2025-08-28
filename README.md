@@ -157,7 +157,7 @@ More metrics in the project paper / Mais métricas no TCC.
 
 <br>
 
-## 📝 Limitações e Próximos Passos
+## 📝 Limitations and next steps / Limitações e próximos passos
 
 **Generalization:** Validate on broader datasets and in less controlled environments.
 
