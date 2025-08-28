@@ -225,7 +225,7 @@ Batista K.S. (2025). Fall Detection Model with Ultralytics YOLO version 11 and L
 ```
 <br>
 
-## 📞 Contact
+## 📞 Contact / Contato
 
 For questions, discussions, and support, contact me at **kelsonbatista [at] gmail.com**.
 
