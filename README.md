@@ -209,11 +209,24 @@ More metrics in the project paper / Mais métricas no TCC.
 ## ✍🏻 Cite
 
 If you find this project helpful, **give me a star** ⭐ / Se você achar esse projeto útil, **me dê uma estrela** ⭐
+
+Article (Bibtex):
+
 ```
-Batista K.S. (2025). Fall Detection Model with Ultralytics YOLO version 11 and LSTM
+@article{Kelson_Fall_Detection_2025,
+  title={Aplicação de Visão Computacional para Detecção de Quedas em Ambientes Domésticos Utilizando Redes Neurais YOLO e LSTM},
+  author={Batista, K.S.},
+  journal={MBA em Inteligência Artificial e Big Data. Universidade de São Paulo USP-ICMC},
+  year={2025},
+  month = {out.},
+  url={}
+}
 ```
+
+Code (Bibtex):
+
 ```
-@software{Kelson_Fall_Detection_Model_2025,
+@software{Kelson_Fall_Detection_Code_2025,
     author = {Kelson Batista},
     license = {GPL-3.0},
     month = ago,
